@@ -9,7 +9,7 @@ jobs:
   actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: port-labs/port-github-actions@v1
+      - uses: port-labs/port-github-action@v1
         with:
           clientId: ${{ secrets.CLIENT_ID }}
           clientSecret: ${{ secrets.CLIENT_SECRET }}
