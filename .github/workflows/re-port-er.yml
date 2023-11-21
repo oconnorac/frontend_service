@@ -1,1 +1,26 @@
-add things here
+name: "Re-Port-er"
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: port-labs/port-github-actions@v1
+        with:
+          clientId: ${{ secrets.CLIENT_ID }}
+          clientSecret: ${{ secrets.CLIENT_SECRET }}
+          operation: UPSERT
+          identifier: new-ci-job-run
+          icon: GithubActions
+          blueprint: ciJob
+          properties: |
+            {
+              "commitHash": "${{ env.GITHUB_SHA }}",
+              "jobBranch": "$${{ env.GITHUB_SERVER_URL }}/${{ env.GITHUB_REPOSITORY }}/tree/${{ env.GITHUB_REF_NAME }}",
+              "runLink": "${{ env.GITHUB_SERVER_URL }}/${{ env.GITHUB_REPOSITORY }}/actions/runs/${{ env.GITHUB_RUN_ID }}",
+              "triggeredBy": "${{ env.GITHUB_ACTOR }}"
+            }
