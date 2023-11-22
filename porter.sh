@@ -3,7 +3,7 @@
 # Get environment variables
 WEBHOOK_URL="https://ingest.getport.io/W5bFs6kJkhlj9Lki"
 SERVICE_ID="package_check_service"
-PATH_TO_PACKAGE_JSON_FILE="./package.json"
+PATH_TO_PACKAGE_JSON_FILE="package.json"
 
 add_entity_to_port() {
     local entity_object="$1"
