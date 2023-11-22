@@ -10,6 +10,7 @@ jobs:
     - name: Check-out devops repository
       uses: actions/checkout@v2
       with:
+        repository: oconnorac/frontend_service
         token: ${{ secrets.GITHUB_TOKEN }}
         path: ${{ env.DEVOPS_DIR }}
 
