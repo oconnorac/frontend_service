@@ -18,6 +18,5 @@ jobs:
         path: ${{ env.FRONTEND_DIR }}
 
     - name: Hello World
-      #run: sh ${{ env.FRONTEND_DIR }}/porter.sh
-      run: sh porter.sh
+      run: sh ${{ env.FRONTEND_DIR }}./porter.sh
       shell: sh
