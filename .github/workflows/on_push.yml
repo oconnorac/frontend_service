@@ -14,5 +14,5 @@ jobs:
         path: ${{ env.DEVOPS_DIR }}
 
     - name: Hello World
-      run: python ${{ env.DEVOPS_DIR }}/hello_world.py
+      run: python ${{ env.DEVOPS_DIR }}/.github/workflows/hello_world.py
       shell: sh
