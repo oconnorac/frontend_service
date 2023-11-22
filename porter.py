@@ -3,7 +3,8 @@ import json
 import os
 
 # Get environment variables using the config object or os.environ["KEY"]
-WEBHOOK_URL = os.environ['https://ingest.getport.io/W5bFs6kJkhlj9Lki'] ## the value of the URL you receive after creating the Port webhook
+#WEBHOOK_URL = os.environ['https://ingest.getport.io/W5bFs6kJkhlj9Lki'] ## the value of the URL you receive after creating the Port webhook
+WEBHOOK_URL = 'https://ingest.getport.io/W5bFs6kJkhlj9Lki'
 SERVICE_ID = os.environ['package_check_service'] ## The identifier of your service in Port
 PATH_TO_PACKAGE_JSON_FILE = os.environ['package.json']
 
