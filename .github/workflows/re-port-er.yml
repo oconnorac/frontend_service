@@ -24,3 +24,7 @@ jobs:
               "runLink": "${{ env.GITHUB_SERVER_URL }}/${{ env.GITHUB_REPOSITORY }}/actions/runs/${{ env.GITHUB_RUN_ID }}",
               "triggeredBy": "${{ env.GITHUB_ACTOR }}"
             }
+      - uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'get-issue'
+          token: ${{ secrets.GITHUB_TOKEN }}
