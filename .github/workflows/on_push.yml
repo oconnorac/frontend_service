@@ -23,5 +23,5 @@ jobs:
         ls -la
         cd frontend_service
         ls -la
-        sh ${{ env.FRONTEND_DIR }}./porter.sh
+        sh porter.sh
       shell: sh
