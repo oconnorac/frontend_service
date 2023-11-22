@@ -21,4 +21,7 @@ jobs:
       # run: sh ${{ env.FRONTEND_DIR }}./porter.sh
       run: |
         ls -la
+        cd frontend_service
+        ls -la
+        sh ${{ env.FRONTEND_DIR }}./porter.sh
       shell: sh
