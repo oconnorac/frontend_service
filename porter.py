@@ -1,5 +1,6 @@
 import requests
 import json
+import os
 
 # Get environment variables using the config object or os.environ["KEY"]
 WEBHOOK_URL = os.environ['https://ingest.getport.io/W5bFs6kJkhlj9Lki'] ## the value of the URL you receive after creating the Port webhook
