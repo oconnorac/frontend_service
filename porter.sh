@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Get environment variables
-WEBHOOK_URL="https://ingest.getport.io/W5bFs6kJkhlj9Lki"
-SERVICE_ID="package_check_service"
+WEBHOOK_URL="https://ingest.getport.io/UIv2yQqa9vBQatsS"
+SERVICE_ID="serviceBluePrint"
 PATH_TO_PACKAGE_JSON_FILE="package.json"
 
 add_entity_to_port() {
