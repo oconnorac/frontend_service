@@ -1,0 +1,22 @@
+name: Adjust a load balancer
+
+on:
+  workflow_dispatch:
+    inputs:
+      port_context:
+        required: true
+        description: Information sent from Port
+
+jobs:
+  adjust_load_balancer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log starting of action
+        uses: port-labs/port-github-action@v1
+        with:
+          clientId: ${{ secrets.PORT_CLIENT_ID }}
+          clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
+          operation: PATCH_RUN
+          runId: ${{ fromJson(inputs.port_context).rund_id }}
+          logMessage: |
+            Beginning the process of adjusting ${{ inputs.port_context.entity.title }}
