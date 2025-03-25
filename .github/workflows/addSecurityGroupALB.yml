@@ -6,9 +6,9 @@ on:
       port_context:
         required: true
         description: Information sent from Port
-      inputs:
+      securityGroup:
         required: true
-        description: User inputs
+        description: Security group
 
 jobs:
   adjust_load_balancer:
@@ -37,4 +37,4 @@ jobs:
           operation: PATCH_RUN
           runId: ${{ fromJson(inputs.port_context).runId }}
           logMessage: |
-            Adding ${{ inputs }} as a security group for ${{ fromJson(inputs.port_context).entity.title }}
+            Adding ${{ inputs.securityGroup }} as a security group for ${{ fromJson(inputs.port_context).entity.title }}
