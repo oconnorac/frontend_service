@@ -19,4 +19,4 @@ jobs:
           operation: PATCH_RUN
           runId: ${{ fromJson(inputs.port_context).runId }}
           logMessage: |
-            Beginning the process of adjusting ${{ inputs.port_context.entity.title }}
+            Beginning the process of adjusting ${{ fromJson(inputs.port_context.entity).title }}
