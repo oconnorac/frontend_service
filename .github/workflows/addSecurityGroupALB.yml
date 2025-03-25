@@ -17,6 +17,6 @@ jobs:
           clientId: ${{ secrets.PORT_CLIENT_ID }}
           clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
           operation: PATCH_RUN
-          runId: ${{ port_context.run_id }}
+          runId: ${{ fromJson(inputs.port_context).run_id }}
           logMessage: |
             Beginning the process of adjusting ${{ inputs.port_context.entity.title }}
