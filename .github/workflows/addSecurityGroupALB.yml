@@ -37,4 +37,4 @@ jobs:
           operation: PATCH_RUN
           runId: ${{ fromJson(inputs.port_context).runId }}
           logMessage: |
-            Adding ${{ fromJson(inputs.security_group).title }} as a security group for ${{ fromJson(inputs.port_context).entity.title }}
+            Adding ${{ inputs }} as a security group for ${{ fromJson(inputs.port_context).entity.title }}
